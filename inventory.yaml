@@ -1,0 +1,8 @@
+pi:
+  hosts:
+    home:
+      ansible_host: 192.168.178.47
+      ansible_user: ubuntu
+    zschortau:
+      ansible_host: 192.168.178.55
+      ansible_user: pi

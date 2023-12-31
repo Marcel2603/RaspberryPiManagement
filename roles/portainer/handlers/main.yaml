@@ -1,0 +1,10 @@
+---
+- name: Stop portainer services
+  community.docker.docker_compose:
+    project_src: "{{ folder }}"
+    state: absent
+
+- name: Start portainer services
+  community.docker.docker_compose:
+    project_src: "{{ folder }}"
+    state: present

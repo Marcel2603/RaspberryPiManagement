@@ -1,0 +1,16 @@
+- name: Deploy homeassistant
+  hosts: home
+  roles:
+    - common
+    - homeassistant
+    - adguardhome
+    - watchtower
+    - tailscale
+    - portainer
+- name: Deploy homeassistant
+  hosts: zschortau
+  roles:
+    - common
+    - homeassistant
+    - watchtower
+    - portainer

@@ -1,0 +1,12 @@
+---
+- name: Stop watchtower services
+  become: true
+  community.docker.docker_compose:
+    project_src: "{{ folder }}"
+    state: absent
+
+- name: Start watchtower services
+  become: true
+  community.docker.docker_compose:
+    project_src: "{{ folder }}"
+    state: present

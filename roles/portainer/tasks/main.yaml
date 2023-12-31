@@ -1,0 +1,15 @@
+---
+- name: Create basefolder
+  ansible.builtin.file:
+    path: "{{ folder }}"
+    mode: "0755"
+    state: directory
+
+- name: Copy docker-compose files
+  ansible.builtin.copy:
+    src: "{{ role_path }}/files/"
+    dest: "{{ folder }}/"
+    mode: "0664"
+  notify:
+    - Stop portainer services
+    - Start portainer services

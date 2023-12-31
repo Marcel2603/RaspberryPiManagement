@@ -41,7 +41,7 @@
 
 - name: Add user to docker
   user:
-    name: "ubuntu"
+    name: "{{ ansible_user_id }}"
     append: yes
     groups: [docker]
   become: true
